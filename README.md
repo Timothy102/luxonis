@@ -15,4 +15,4 @@ Use scrapy framework to scrape the first 500 items (title, image url) from sreal
    docker-compose up --build
 ```
 
-Note: Port 8080 on my device is saved by the Docker Daemon, hence I diverted traffic through port 8000. Nevertheless, I've included code that would have used NGINX as a reverse proxy(nginx.conf). Commented it out on docker-compose.yml
+Note: Port 8080 on my device is saved by the Docker Daemon, hence I diverted traffic through port 8000. Nevertheless, I've included code that would have used NGINX as a reverse proxy(nginx.conf) because I assume that's part of the test. Commented it out on docker-compose.yml.
