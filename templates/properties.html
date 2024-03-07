@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraped Properties</title>
+    <style>
+        .property {
+            margin-bottom: 20px;
+        }
+        .title {
+            font-weight: bold;
+        }
+        .image {
+            max-width: 200px;
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scraped Properties from Sreality.cz</h1>
+    <p>{{ message }}</p> <!-- Display the message here -->
+    {% for property in properties %}
+    <div class="property">
+        <p class="title">{{ property.title }}</p>
+        <a href="https://www.sreality.cz/{{ property.href }}" target="_blank">Link</a>
+        <img src="{{ property.image_url }}" alt="Property Image" class="image">
+    </div>
+    {% endfor %}
+</body>
+</html>
